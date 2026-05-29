@@ -28,6 +28,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Homepage Integration**: Replaced the static placeholder with the interactive `Upload` component on the landing page (`app/routes/home.tsx`).
 - **Route Configuration**: Configured the dynamic `:id` route parameter for `/visualizer/:id` in `app/routes.ts`.
 
+### Fixed
+- **DevTools Route Matching Noise**: Added a dummy `com.chrome.devtools.json` static asset to suppress DevTools console query errors in development.
+
 ---
 
 ## [0.1.0] - 2026-02-19
