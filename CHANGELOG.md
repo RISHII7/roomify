@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [Unreleased] - feat/upload-files
+## [0.2.0] - 2026-05-29
 
 ### Added
 - **Interactive Drag-and-Drop Uploader**: Created a robust `Upload` component (`components/upload/index.tsx`) using React hooks (`useCallback`, `useEffect`, `useRef`, `useState`) and Tailwind CSS.
@@ -17,28 +17,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Client-Side Routing to Visualizer**: Handled navigation to the dynamic visualizer page (`/visualizer/:id`) after successful file upload completion.
 - **Visualizer Layout Placeholder**: Created a route parameter page `visualizer.$id.tsx` to handle the rendering of uploaded floor plans and AI visualizations.
 - **Configuration & Timing Constants**: Centralized constants (`lib/constants/index.ts`) for timeouts, intervals, sizes, and the highly-detailed AI render prompt (`ROOMIFY_RENDER_PROMPT`).
-
-### Changed
-- **Homepage Integration**: Replaced the static placeholder with the interactive `Upload` component on the landing page (`app/routes/home.tsx`).
-- **Route Configuration**: Configured the dynamic `:id` route parameter for `/visualizer/:id` in `app/routes.ts`.
-
----
-
-## [0.2.0] - feat/homepage
-
-### Added
 - **Modern Landing Page**: Overhauled `app/routes/home.tsx` to display a sleek hero section, dynamic branding, announcement badges, and CTA triggers.
 - **Community Projects Grid**: Built a visual grid showing mock-up architectural rendering items with metadata and badges.
-
----
-
-## [0.1.1] - feat/authentication
-
-### Added
 - **Puter.js Integration**: Added `@heyputer/puter.js` as a dependency.
 - **Modular Auth Actions**: Created `lib/puter.action.ts` wrapper actions for `signIn`, `signOut`, and `getCurrentUser`.
 - **Global Auth State**: Configured root React Context (`app/root.tsx`) to manage and propagate authentication state globally.
 - **Auth UI Integration**: Dynamic login/logout buttons and user greeting badges in the Navbar component.
+
+### Changed
+- **Homepage Integration**: Replaced the static placeholder with the interactive `Upload` component on the landing page (`app/routes/home.tsx`).
+- **Route Configuration**: Configured the dynamic `:id` route parameter for `/visualizer/:id` in `app/routes.ts`.
 
 ---
 
