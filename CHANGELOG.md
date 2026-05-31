@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **AI 3D Image Generation**: Integrated Puter's `puter.ai.txt2img` using the `gemini-2.5-flash-image-preview` model and the custom detailed prompt (`ROOMIFY_RENDER_PROMPT`) to generate top-down 3D architectural renders (`lib/ai.action.ts`).
+- **Before-and-After Slider**: Incorporated `react-compare-slider` in the Editor/Visualizer view to enable interactive comparison between original and rendered floor plans.
+- **Dynamic Image Export**: Added export download functionality in the Visualizer page to download generated renders as PNG files.
 - **Project Creation & Database Save**: Implemented `createProject` in `lib/puter.action.ts` to host project assets (source and rendered images) via Puter hosting and save project entries to the Puter worker database.
 - **Project History Listing**: Integrated `getProjects` and `getProjectById` to pull all designs or fetch a specific project entry from the worker database.
 - **Dynamic Visualizer Rendering**: Updated the `visualizer.$id` route (`app/routes/visualizer.$id.tsx`) to pull source image and name details from location router state.
