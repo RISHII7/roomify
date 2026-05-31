@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Project Creation & Database Save**: Implemented `createProject` in `lib/puter.action.ts` to host project assets (source and rendered images) via Puter hosting and save project entries to the Puter worker database.
+- **Project History Listing**: Integrated `getProjects` and `getProjectById` to pull all designs or fetch a specific project entry from the worker database.
+- **Dynamic Visualizer Rendering**: Updated the `visualizer.$id` route (`app/routes/visualizer.$id.tsx`) to pull source image and name details from location router state.
+- **Homepage Integration**: Configured `app/routes/home.tsx` to handle full project creation workflow, store new projects locally, and navigate users to their visualizer layout.
 - **Puter.js Site Hosting Integration**: Implemented hosting configurations via `puter.hosting.create` dynamically linked to user subdomain naming and persisted in Puter's key-value store.
 - **Image Hosting Pipeline**: Added an asset pipeline (`lib/puter.hosting.ts`) to dynamically fetch, convert, and host source/rendered image assets directly on the user's hosted domain.
 - **File System & Blob Utilities**: Created helpers (`lib/utils/index.ts`) for canvas-to-blob transformation, Base64 data URL parser, content-type mapping, and image file extension retrieval.
