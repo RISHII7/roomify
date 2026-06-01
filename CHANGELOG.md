@@ -25,10 +25,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Image Hosting Pipeline**: Added an asset pipeline (`lib/puter.hosting.ts`) to dynamically fetch, convert, and host source/rendered image assets directly on the user's hosted domain.
 - **File System & Blob Utilities**: Created helpers (`lib/utils/index.ts`) for canvas-to-blob transformation, Base64 data URL parser, content-type mapping, and image file extension retrieval.
 - **Extended Type Definitions**: Expanded `types.d.ts` to support project assets, layout props, material catalogs, and hosting configurations.
+- **Environment Template**: Created `.env.example` to document the required environment variables (`VITE_PUTER_WORKER_URL`).
 
 ### Fixed
 - **TypeScript & Dependency Resolution**: Installed missing `react-compare-slider` package and resolved a type safety assignment error (`TS2322`) in the comparison slider component inside `app/routes/visualizer.$id.tsx`.
 - **TypeScript Deprecation**: Migrated `tsconfig.json` from the deprecated `baseUrl` option to explicit path mapping configurations to resolve TS 7.0 compatibility warnings.
+- **CI/CD Lockfile Alignment**: Resolved a pipeline deployment error by synchronizing `package-lock.json` with `package.json` to allow clean installations (`npm ci`) in GitHub Actions and Docker build environments.
+- **Mermaid Diagram Syntax**: Fixed a syntax parse error in the `README.md` architectural flow diagram by quoting the subgraph name.
 
 ---
 
