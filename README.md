@@ -28,7 +28,7 @@ graph TD
     UploadComp -->|2. Base64 String| HomeRoute[app/routes/home.tsx]
     HomeRoute -->|3. Create Project| PuterAction[lib/puter.action.ts]
     
-    subgraph Puter Services (CDN/Cloud)
+    subgraph "Puter Services (CDN/Cloud)"
         PuterAction -->|4. Push Blobs| PuterHosting[lib/puter.hosting.ts]
         PuterHosting -->|5. Write File| PuterFS[(Puter File System)]
         PuterAction -->|6. Execute HTTP Call| PuterWorker[lib/puter.worker.js]
