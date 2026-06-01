@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [Unreleased]
+## [1.0.0-lts] - 2026-06-01
 
 ### Added
 - **Puter.js Cloud Worker Script**: Created the router script (`lib/puter.worker.js`) executing on the Puter.js cloud execution service, implementing:
@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Extended Type Definitions**: Expanded `types.d.ts` to support project assets, layout props, material catalogs, and hosting configurations.
 
 ### Fixed
+- **TypeScript & Dependency Resolution**: Installed missing `react-compare-slider` package and resolved a type safety assignment error (`TS2322`) in the comparison slider component inside `app/routes/visualizer.$id.tsx`.
 - **TypeScript Deprecation**: Migrated `tsconfig.json` from the deprecated `baseUrl` option to explicit path mapping configurations to resolve TS 7.0 compatibility warnings.
 
 ---
