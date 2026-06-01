@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Puter.js Cloud Worker Script**: Created the router script (`lib/puter.worker.js`) executing on the Puter.js cloud execution service, implementing:
+  - `POST /api/projects/save`: Saves projects by UUID with verification, using Puter's KV database.
+  - `GET /api/projects/list`: Queries and lists all stored user projects prefixed with `roomify_project_`.
+  - `GET /api/projects/get`: Queries and retrieves a single project item details using the project ID.
 - **AI 3D Image Generation**: Integrated Puter's `puter.ai.txt2img` using the `gemini-2.5-flash-image-preview` model and the custom detailed prompt (`ROOMIFY_RENDER_PROMPT`) to generate top-down 3D architectural renders (`lib/ai.action.ts`).
 - **Before-and-After Slider**: Incorporated `react-compare-slider` in the Editor/Visualizer view to enable interactive comparison between original and rendered floor plans.
 - **Dynamic Image Export**: Added export download functionality in the Visualizer page to download generated renders as PNG files.
